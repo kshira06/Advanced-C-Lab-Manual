@@ -17,6 +17,9 @@ Algorithm:
 Program:
 
 ```
+#include <stdio.h>
+
+int main() {
 int n;
 
 printf("Enter an integer: ");
@@ -58,6 +61,7 @@ switch(n) {
         printf("greater than 13\n");
 }
 return 0;
+}
 ```
 
 
@@ -90,21 +94,27 @@ Algorithm:
 Program:
 
 ```
-printf("Enter a string containing digits: ");
-scanf("%s", a);
+#include <stdio.h>
+#include <string.h>
 
-for (h = 0; h < 10; h++) {
-    c = 0; 
-    for (i = 0; i < strlen(a); i++) {
-        if (a[i] == (h + '0')) {
-            c++;
-        }
-    }
-    printf("%d ", c);
+int main() {
+ char a[50]; int i, h, c;
+ printf("Enter a string containing digits: ");
+ scanf("%s", a);
+
+ for (h = 0; h < 10; h++) {
+     c = 0; 
+     for (i = 0; i < strlen(a); i++) {
+         if (a[i] == (h + '0')) {
+             c++;
+         }
+     }
+     printf("%d ", c);
+ }
+
+ printf("\n");
+ return 0;
 }
-
-printf("\n");
-return 0;
 ```
 
 
